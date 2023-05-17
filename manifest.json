@@ -1,0 +1,9 @@
+{
+	"initial": [
+		"libs/egret.js?k=ba363ace",
+		"config/config.js?k=30b69665"
+	],
+	"game": [
+		"resource/app/entry/entry.js?k=7bc4595"
+	]
+}

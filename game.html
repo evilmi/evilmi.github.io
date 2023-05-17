@@ -1,0 +1,86 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>赛尔号,赛尔号h5,赛尔号互通</title>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <style>
+            html,
+            body {
+                -ms-touch-action: none;
+                background: #FFFFFF;
+                padding: 0;
+                border: 0;
+                margin: 0;
+                height: 100%;
+            }
+
+            .logo {
+                width: 100%;
+                height: 100%;
+                display: table;
+                text-align: center;
+                position: fixed;
+                color: #fff;
+
+            }
+
+            .bg-black {
+                background: #000;
+            }
+
+            .bg-white {
+                background: #fff;
+            }
+
+            .depth-top {
+                z-index: 999998;
+            }
+
+            .depth-middle {
+                z-index: 999997;
+            }
+
+            .center {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            @font-face {
+                font-family: HuaKangXinZongYi;
+                src: url('resource/font/hkxzy.ttf')
+            }
+        </style>
+		
+    </head>
+
+    <body>
+        <div id="logo" class="logo depth-top bg-white">
+            <span class="center">
+                <img src="resource/web/image/logo.svg" alt="" width="50%" />
+            </span>
+        </div>
+
+        <script>
+			
+		
+		
+            var rootUrl = new URL(location.href)
+			var wwwroot = rootUrl.origin+rootUrl.pathname
+            window["wwwroot"] = wwwroot;
+
+            var s = document.createElement('script');
+            s.async = false;
+            <!--s.src = wwwroot + "app.js?t=" + Date.now();-->
+            s.src = "app.js?t=" + Date.now();
+            s.addEventListener('load', function () {
+                s.parentNode.removeChild(s);
+                s.removeEventListener('load', arguments.callee, false);
+            }, false);
+            document.body.appendChild(s);
+        </script>
+    </body>
+</html>
